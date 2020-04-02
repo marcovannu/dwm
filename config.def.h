@@ -84,7 +84,7 @@ static Key keys[] = {
 
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e ranger") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e nnn") },
 	{ MODKEY,                       XK_i,      spawn,          SHCMD("st -e htop") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
 	{ MODKEY,                       XK_y,      spawn,          SHCMD("bash .local/bin/youtubedl") },
