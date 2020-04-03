@@ -91,6 +91,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("mpc prev") },
 	{ MODKEY,                       XK_n,      spawn,          SHCMD("mpc prev") },
 	{ MODKEY,                       XK_p,      spawn,          SHCMD("mpc toggle") },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("scrot -s /home/marco/Immagini/Schermate/n.png") },
 	{ MODKEY,                       XK_m,      spawn,          SHCMD("st -e ncmpcpp") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("st -e ncmpcpp -s visualizer") },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
