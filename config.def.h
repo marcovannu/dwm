@@ -77,7 +77,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F1,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Shutdown computer?\")\" = Yes ] &&  shutdown -h now") },
 	{ MODKEY,			XK_F2,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Reboot computer?\")\" = Yes ] && reboot") },
 	{ MODKEY,			XK_F3,		spawn,	   SHCMD("st -e nmtui") },
-	{ MODKEY|ShiftMask,		XK_F3,		spawn,	   SHCMD("nmcli device wifi rescan") },
+	{ MODKEY|ShiftMask,		XK_F3,		spawn,	   SHCMD("st -e nmcli device wifi rescan") },
 	{ MODKEY,			XK_F5,		spawn,	   SHCMD("bash .local/bin/displayselect") },
 	{ MODKEY,			XK_F9,		spawn,	   SHCMD("st -e pamix") },
 	{ MODKEY,			XK_F10,		spawn,	   SHCMD("blueman-manager") },
