@@ -85,9 +85,10 @@ static Key keys[] = {
 
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e nnn") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e n") },
 	{ MODKEY,                       XK_i,      spawn,          SHCMD("st -e htop") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("brave -new-window https://web.telegram.org/im") },
 	{ MODKEY,                       XK_y,      spawn,          SHCMD("bash .local/bin/youtubedl") },
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("mpc prev") },
 	{ MODKEY,                       XK_n,      spawn,          SHCMD("mpc prev") },
