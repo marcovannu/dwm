@@ -79,7 +79,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F3,	   spawn,	   SHCMD("st -e nmtui") },
 	{ MODKEY|ShiftMask,		XK_F3,	   spawn,	   SHCMD("st -e nmcli device wifi rescan") },
 	{ MODKEY,			XK_F5,	   spawn,	   SHCMD("bash .local/bin/displayselect") },
-	{ MODKEY,			XK_F9,	   spawn,	   SHCMD("st -e pamix") },
+	{ MODKEY,			XK_F9,	   spawn,	   SHCMD("st -e pulsemixer") },
 	{ MODKEY,			XK_F10,	   spawn,	   SHCMD("blueman-manager") },
 	{ MODKEY,			XK_F12,	   spawn,	   SHCMD("bash .local/bin/USB") },
 
