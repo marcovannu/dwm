@@ -28,7 +28,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       1 << 4,           0,           -1 },
-	{ "Steam",    NULL,       NULL,       1 << 5,           1,           -1 },
+	{ "TelegramDesktop",   NULL,       NULL,       1 << 6,           1,           -1 },
         { "Transmission-gtk",    NULL,       NULL,       1 << 7,           0,           -1 },
 	/*{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },*/
 };
@@ -90,7 +90,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e nnn") },
 	{ MODKEY,                       XK_i,      spawn,          SHCMD("st -e htop") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
-	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("qutebrowser https://web.telegram.org/im --target window") },
+	{ MODKEY,                       XK_w,      spawn,          SHCMD("telegram-desktop") },
 	{ MODKEY,                       XK_y,      spawn,          SHCMD("bash .local/bin/youtubedl") },
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("mpc prev") },
 	{ MODKEY,                       XK_n,      spawn,          SHCMD("mpc prev") },
