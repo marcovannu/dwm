@@ -90,7 +90,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e nnn") },
 	{ MODKEY,                       XK_i,      spawn,          SHCMD("st -e htop") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("telegram-desktop") },
+	{ MODKEY,                       XK_t,      spawn,          SHCMD("telegram-desktop") },
 	{ MODKEY,                       XK_y,      spawn,          SHCMD("bash .local/bin/youtubedl") },
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("mpc prev") },
 	{ MODKEY,                       XK_n,      spawn,          SHCMD("mpc prev") },
@@ -109,7 +109,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,  zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
 	/*{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },*/
 	{ MODKEY,                       XK_f,      fullscreen,     {0} },
 	/*{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },*/
