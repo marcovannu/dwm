@@ -93,7 +93,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      spawn,          SHCMD("telegram-desktop") },
 	{ MODKEY,                       XK_y,      spawn,          SHCMD("bash .local/bin/youtubedl") },
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("mpc prev") },
-	{ MODKEY,                       XK_n,      spawn,          SHCMD("mpc prev") },
+	{ MODKEY,                       XK_n,      spawn,          SHCMD("mpc next") },
 	{ MODKEY,                       XK_p,      spawn,          SHCMD("mpc toggle") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("bash .local/bin/screenshot") },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
