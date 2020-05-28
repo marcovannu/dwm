@@ -97,6 +97,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          SHCMD("mpc toggle") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("scrot") },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
+	{ MODKEY,                       XK_r,      spawn,          SHCMD("st -e newsboat") },
 	{ MODKEY,                       XK_m,      spawn,          SHCMD("st -e ncmpcpp") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("st -e ncmpcpp -s visualizer") },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
