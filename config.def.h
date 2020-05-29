@@ -28,6 +28,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       1 << 4,           0,           -1 },
+	{ "Darktable", NULL,       NULL,       1 << 4,           0,           -1 },
 	{ "TelegramDesktop",   NULL,       NULL,       1 << 6,           0,           -1 },
         { "Transmission-gtk",    NULL,       NULL,       1 << 7,           0,           -1 },
 	/*{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },*/
@@ -64,9 +65,9 @@ static const char *termcmd[]  = { "st", NULL };
 #include <X11/XF86keysym.h>
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ 0, XF86XK_AudioMute,		           spawn,    	   SHCMD("pulsemixer --toggle-mute") },
-	{ 0, XF86XK_AudioRaiseVolume,	           spawn,	   SHCMD("pulsemixer --change-volume +1") },
-	{ 0, XF86XK_AudioLowerVolume,	           spawn,          SHCMD("pulsemixer --change-volume -1") },
+	{ 0, XF86XK_AudioMute,		           spawn,    	   SHCMD("amixer set Master toggle") },
+	{ 0, XF86XK_AudioRaiseVolume,	           spawn,	   SHCMD("amixer set Master 1%+") },
+	{ 0, XF86XK_AudioLowerVolume,	           spawn,          SHCMD("amixer set Master 1%-") },
 
 	{ 0, XF86XK_AudioPrev,		           spawn,	   SHCMD("mpc prev") },
 	{ 0, XF86XK_AudioNext,		           spawn,	   SHCMD("mpc next") },
@@ -103,8 +104,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,			XK_Left,   spawn,	   SHCMD("sudo xbacklight -dec 5") },
 	{ MODKEY,			XK_Right,  spawn,	   SHCMD("sudo xbacklight -inc 5") },
-	{ MODKEY,			XK_Up,     spawn,	   SHCMD("pulsemixer --change-volume +1") },
-	{ MODKEY,			XK_Down,   spawn,	   SHCMD("pulsemixer --change-volume -1") },
+	{ MODKEY,			XK_Up,     spawn,	   SHCMD("amixer set Master 1%+") },
+	{ MODKEY,			XK_Down,   spawn,	   SHCMD("amixer set Master 1%-") },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_o,      incnmaster,     {.i = +1 } },
