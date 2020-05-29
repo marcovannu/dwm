@@ -28,6 +28,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       1 << 4,           0,           -1 },
+	{ "Darktable",     NULL,       NULL,       1 << 4,           0,           -1 },
 	{ "TelegramDesktop",   NULL,       NULL,       1 << 6,           0,           -1 },
         { "Transmission-gtk",    NULL,       NULL,       1 << 7,           0,           -1 },
 	/*{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },*/
