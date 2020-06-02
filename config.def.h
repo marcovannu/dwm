@@ -78,8 +78,8 @@ static Key keys[] = {
 	{ 0, XF86XK_MonBrightnessUp,	           spawn,	   SHCMD("sudo xbacklight -inc 5") },
 	{ 0, XF86XK_MonBrightnessDown,	           spawn,	   SHCMD("sudo xbacklight -dec 5") },
 
-	{ MODKEY,			XK_F1,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -fn 'monospace-8'-p \"Shutdown computer?\")\" = Yes ] &&  shutdown -h now") },
-	{ MODKEY,			XK_F2,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -fn 'monospace-8'-p \"Reboot computer?\")\" = Yes ] && reboot") },
+	{ MODKEY,			XK_F1,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -fn 'monospace-8' -p \"Shutdown computer?\")\" = Yes ] &&  shutdown -h now") },
+	{ MODKEY,			XK_F2,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -fn 'monospace-8' -p \"Reboot computer?\")\" = Yes ] && reboot") },
 	{ MODKEY,			XK_F3,	   spawn,	   SHCMD("st -e nmtui") },
 	{ MODKEY|ShiftMask,		XK_F3,	   spawn,	   SHCMD("st -e nmcli device wifi rescan") },
 	{ MODKEY,			XK_F5,	   spawn,	   SHCMD("bash .local/bin/displayselect") },
