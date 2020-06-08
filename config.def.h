@@ -27,8 +27,8 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "st",      NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "Gimp",    NULL,     NULL,           1 <<4,     0,          0,           0,        -1 },
+	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
         { "Darktable", NULL,   NULL,           1 << 4,    0,          0,           0,        -1 },
         { "TelegramDesktop", NULL, NULL,       1 << 6,    0,          0,           0,        -1 },
         { "Transmission-gtk", NULL, NULL,      1 << 7,    0,          0,           0,        -1 },
