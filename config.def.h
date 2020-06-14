@@ -98,6 +98,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("mpc prev") },
 	{ MODKEY,                       XK_n,      spawn,          SHCMD("mpc next") },
 	{ MODKEY,                       XK_p,      spawn,          SHCMD("mpc toggle") },
+	{ MODKEY,                       XK_x,      spawn,          SHCMD("amixer sset Capture toggle") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("scrot") },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
 	{ MODKEY,                       XK_r,      spawn,          SHCMD("st -e newsboat") },
