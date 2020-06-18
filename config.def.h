@@ -88,6 +88,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F12,	   spawn,	   SHCMD("bash .local/bin/USB") },
 
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("doppler") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e nnn -e -R") },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("st -e neomutt") },
