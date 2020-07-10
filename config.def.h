@@ -95,7 +95,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_i,      spawn,          SHCMD("st -e htop") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
 	{ MODKEY,                       XK_t,      spawn,          SHCMD("telegram-desktop") },
-	{ MODKEY,                       XK_y,      spawn,          SHCMD("youtubedl") },
+	{ MODKEY,                       XK_y,      spawn,          SHCMD("st -e youtube-viewer") },
 	{ MODKEY,                       XK_v,      spawn,          SHCMD("vpn") },
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("mpc prev") },
 	{ MODKEY,                       XK_n,      spawn,          SHCMD("mpc next") },
