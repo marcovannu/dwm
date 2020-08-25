@@ -92,7 +92,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("doppler") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e nnn -e -R") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e nnn -C -e -R") },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("st -e neomutt") },
 	{ MODKEY,                       XK_i,      spawn,          SHCMD("st -e htop") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
