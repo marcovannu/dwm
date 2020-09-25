@@ -94,7 +94,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("st -e neomutt") },
 	{ MODKEY,                       XK_i,      spawn,          SHCMD("st -e htop") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("firefox") },
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("firefox -P MaximumPrivacy") },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("firefox -P MaximumPrivacy") },
 	{ MODKEY,                       XK_t,      spawn,          SHCMD("telegram-desktop") },
 	{ MODKEY,                       XK_y,      spawn,          SHCMD("st -e youtube-viewer") },
 	{ MODKEY,                       XK_v,      spawn,          SHCMD("vpn") },
