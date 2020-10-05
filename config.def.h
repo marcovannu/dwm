@@ -82,7 +82,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F2,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -fn 'monospace-8' -p \"Reboot computer?\")\" = Yes ] && reboot") },
 	{ MODKEY,			XK_F3,	   spawn,	   SHCMD("st -e nmtui") },
 	{ MODKEY|ShiftMask,		XK_F3,	   spawn,	   SHCMD("st -e nmcli device wifi rescan") },
-	{ MODKEY,			XK_F4,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -fn 'monospace-8' -p \"Suspend computer?\")\" = Yes ] && slock && systemctl suspend") },
+	{ MODKEY,			XK_F4,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -fn 'monospace-8' -p \"Suspend computer?\")\" = Yes ] && systemctl suspend && slock") },
 	{ MODKEY,			XK_F5,	   spawn,	   SHCMD("displayselect") },
 	{ MODKEY,			XK_F9,	   spawn,	   SHCMD("st -e pulsemixer") },
 	{ MODKEY,			XK_F10,	   spawn,	   SHCMD("blueman-manager") },
