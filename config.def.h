@@ -96,7 +96,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e nnn -C -e -R") },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("st -e neomutt") },
 	{ MODKEY,                       XK_i,      spawn,          SHCMD("st -e htop") },
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("firefox") },
+	{ MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("firefox -P MaximumPrivacy") },
 	{ MODKEY,                       XK_t,      spawn,          SHCMD("telegram-desktop") },
 	{ MODKEY,                       XK_y,      spawn,          SHCMD("st -e youtube-viewer") },
@@ -105,7 +105,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_n,      spawn,          SHCMD("mpc next") },
 	{ MODKEY,                       XK_p,      spawn,          SHCMD("mpc toggle") },
 	/*{ MODKEY,                       XK_x,      spawn,          SHCMD("amixer sset Capture toggle; kill -36 $(pidof dwmblocks)") },*/
-	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("scrot") },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("maim ~/immagini/schermate/$(date '+%d%m%y-%H%M-%S').png") },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
 	{ MODKEY,                       XK_r,      spawn,          SHCMD("st -e newsboat") },
 	{ MODKEY,                       XK_m,      spawn,          SHCMD("st -e ncmpcpp") },
