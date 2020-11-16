@@ -32,7 +32,6 @@ static const Rule rules[] = {
 	{ "Gimp",    NULL,     NULL,           1 <<4,     0,          0,           0,        -1 },
 	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
         { "Darktable", NULL,   NULL,           1 << 4,    0,          0,           0,        -1 },
-        { "TelegramDesktop", NULL, NULL,       1 << 6,    0,          0,           0,        -1 },
         { "Transmission-gtk", NULL, NULL,      1 << 7,    0,          0,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 };
@@ -98,7 +97,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_i,      spawn,          SHCMD("st -e htop") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("firefox -P MaximumPrivacy") },
-	{ MODKEY,                       XK_t,      spawn,          SHCMD("telegram-desktop") },
+	{ MODKEY,                       XK_t,      spawn,          SHCMD("st -e tg") },
 	{ MODKEY,                       XK_y,      spawn,          SHCMD("st -e youtube-viewer") },
 	{ MODKEY,                       XK_v,      spawn,          SHCMD("vpn") },
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("mpc prev") },
