@@ -85,6 +85,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_F3,	   spawn,	   SHCMD("st -e nmcli device wifi rescan") },
 	{ MODKEY,			XK_F4,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -fn 'monospace-8' -p \"Suspend computer?\")\" = Yes ] && systemctl suspend && slock") },
 	{ MODKEY,			XK_F5,	   spawn,	   SHCMD("displayselect") },
+	{ MODKEY,			XK_F8,	   spawn,	   SHCMD("screen_rotation.sh") },
 	{ MODKEY,			XK_F9,	   spawn,	   SHCMD("st -e pulsemixer") },
 	{ MODKEY,			XK_F10,	   spawn,	   SHCMD("blueman-manager") },
 	{ MODKEY,			XK_F12,	   spawn,	   SHCMD("USB") },
