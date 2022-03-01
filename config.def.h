@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 18;       /* gap pixel between windows */
+static const unsigned int gappx     = 8;       /* gap pixel between windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -29,8 +29,10 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",    NULL,     NULL,           1 <<4,     0,          0,           0,        -1 },
+	{ "Brave-browser",    NULL,     NULL,  1,     0,          0,           0,        -1 },
+	{ "Gimp",    NULL,     NULL,           1 << 4,     0,          0,           0,        -1 },
 	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
+        { "code-oss", NULL,   NULL,            1 << 3,    0,          0,           0,        -1 },
         { "Darktable", NULL,   NULL,           1 << 4,    0,          0,           0,        -1 },
         { "Transmission-gtk", NULL, NULL,      1 << 7,    0,          0,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
@@ -76,8 +78,8 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioPlay,		           spawn,	   SHCMD("mpc toggle") },
 	{ 0, XF86XK_AudioStop,		           spawn,	   SHCMD("mpc stop") },
 
-	{ 0, XF86XK_MonBrightnessUp,	           spawn,	   SHCMD("sudo xbacklight -inc 5") },
-	{ 0, XF86XK_MonBrightnessDown,	           spawn,	   SHCMD("sudo xbacklight -dec 5") },
+	{ 0, XF86XK_MonBrightnessUp,	           spawn,	   SHCMD("sudo light -A 2") },
+	{ 0, XF86XK_MonBrightnessDown,	           spawn,	   SHCMD("sudo light -U 2") },
 
 	{ MODKEY,			XK_F1,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -fn 'monospace-8' -p \"Shutdown computer?\")\" = Yes ] &&  shutdown -h now") },
 	{ MODKEY,			XK_F2,	   spawn,	   SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -fn 'monospace-8' -p \"Reboot computer?\")\" = Yes ] && reboot") },
@@ -93,11 +95,13 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("doppler") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e nnn -C -e -R") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e nnn -D -e -R") },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("st -e neomutt") },
 	{ MODKEY,                       XK_i,      spawn,          SHCMD("st -e htop") },
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
-	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("firefox -P MaximumPrivacy") },
+	{ MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("qutebrowser --target private-window") },
+	{ MODKEY,                       XK_c,      spawn,          SHCMD("code") },
+	{ MODKEY,                       XK_g,      spawn,          SHCMD("darktable") },
 	{ MODKEY,                       XK_t,      spawn,          SHCMD("st -e tg") },
 	{ MODKEY,                       XK_y,      spawn,          SHCMD("st -e youtube-viewer") },
 	{ MODKEY,                       XK_v,      spawn,          SHCMD("vpn") },
@@ -105,14 +109,14 @@ static Key keys[] = {
 	{ MODKEY,                       XK_n,      spawn,          SHCMD("mpc next") },
 	{ MODKEY,                       XK_p,      spawn,          SHCMD("mpc toggle") },
 	/*{ MODKEY,                       XK_x,      spawn,          SHCMD("amixer sset Capture toggle; kill -36 $(pidof dwmblocks)") },*/
-	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("maim ~/immagini/schermate/$(date '+%d%m%y-%H%M-%S').png") },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("maim -s ~/immagini/schermate/$(date '+%d%m%y-%H%M-%S').png") },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
 	{ MODKEY,                       XK_r,      spawn,          SHCMD("st -e newsboat") },
 	{ MODKEY,                       XK_m,      spawn,          SHCMD("st -e ncmpcpp") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("st -e ncmpcpp -s visualizer") },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
-	{ MODKEY,			XK_Left,   spawn,	   SHCMD("sudo xbacklight -dec 5") },
-	{ MODKEY,			XK_Right,  spawn,	   SHCMD("sudo xbacklight -inc 5") },
+	{ MODKEY,			XK_Left,   spawn,	   SHCMD("sudo light -U 5") },
+	{ MODKEY,			XK_Right,  spawn,	   SHCMD("sudo light -A 5") },
 	{ MODKEY,			XK_Up,     spawn,	   SHCMD("amixer set Master 1%+; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_Down,   spawn,	   SHCMD("amixer set Master 1%-; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
