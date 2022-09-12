@@ -90,6 +90,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F8,	   spawn,	   SHCMD("screen_rotation.sh") },
 	{ MODKEY,			XK_F9,	   spawn,	   SHCMD("st -e pulsemixer") },
 	{ MODKEY,			XK_F10,	   spawn,	   SHCMD("blueman-manager") },
+	{ MODKEY|ShiftMask,		XK_F10,	   spawn,	   SHCMD("st -e sudo systemctl start bluetooth.service") },
 	{ MODKEY,			XK_F12,	   spawn,	   SHCMD("USB") },
 
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
